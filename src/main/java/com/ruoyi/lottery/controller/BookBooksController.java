@@ -21,9 +21,7 @@ import com.ruoyi.common.core.page.TableDataInfo;
 
 /**
  * 图书管理Controller
- * 
- * @author Shawn
- * @date 2024-03-04
+ *
  */
 @Controller
 @RequestMapping("/lottery/books")
@@ -49,9 +47,9 @@ public class BookBooksController extends BaseController
     @ResponseBody
     public TableDataInfo list(BookBooks bookBooks)
     {
-        startPage();
+        startPage();    // 设置请求分页数据
         List<BookBooks> list = bookBooksService.selectBookBooksList(bookBooks);
-        return getDataTable(list);
+        return getDataTable(list);  // 响应请求分页数据
     }
 
     /**
@@ -112,7 +110,6 @@ public class BookBooksController extends BaseController
     {
         return toAjax(bookBooksService.updateBookBooks(bookBooks));
     }
-
     /**
      * 删除图书管理
      */

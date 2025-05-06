@@ -35,7 +35,7 @@ import java.util.List;
 /**
  * 通用请求处理
  *
- * @author ruoyi
+
  */
 @Controller
 @RequestMapping("/common")
