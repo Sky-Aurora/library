@@ -51,8 +51,8 @@ public class BookBooks extends BaseEntity
     @Excel(name = "库存")
     private Long amount;
 
-    /** 销售价 */
-    @Excel(name = "销售价")
+    /** 借阅价 */
+    @Excel(name = "借阅价")
     private Long price;
 
     public void setId(Long id) 

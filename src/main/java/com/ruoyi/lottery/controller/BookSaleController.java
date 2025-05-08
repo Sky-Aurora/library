@@ -23,10 +23,8 @@ import com.ruoyi.common.utils.poi.ExcelUtil;
 import com.ruoyi.common.core.page.TableDataInfo;
 
 /**
- * 销售记录Controller
- * 
- * @author Shawn
- * @date 2024-03-05
+ * 借阅记录Controller
+ *
  */
 @Controller
 @RequestMapping("/lottery/sale")
@@ -45,7 +43,7 @@ public class BookSaleController extends BaseController
     }
 
     /**
-     * 查询销售记录列表
+     * 查询借阅记录列表
      */
     @RequiresPermissions("lottery:sale:list")
     @PostMapping("/list")
@@ -58,21 +56,21 @@ public class BookSaleController extends BaseController
     }
 
     /**
-     * 导出销售记录列表
+     * 导出借阅记录列表
      */
     @RequiresPermissions("lottery:sale:export")
-    @Log(title = "销售记录", businessType = BusinessType.EXPORT)
+    @Log(title = "借阅记录", businessType = BusinessType.EXPORT)
     @PostMapping("/export")
     @ResponseBody
     public AjaxResult export(BookSale bookSale)
     {
         List<BookSale> list = bookSaleService.selectBookSaleList(bookSale);
         ExcelUtil<BookSale> util = new ExcelUtil<BookSale>(BookSale.class);
-        return util.exportExcel(list, "销售记录数据");
+        return util.exportExcel(list, "借阅记录数据");
     }
 
     /**
-     * 新增销售记录
+     * 新增借阅记录
      */
     @GetMapping("/add")
     public String add()
@@ -84,10 +82,10 @@ public class BookSaleController extends BaseController
     IBookBooksService bookBooksService;
 
     /**
-     * 新增保存销售记录
+     * 新增保存借阅记录
      */
     @RequiresPermissions("lottery:sale:add")
-    @Log(title = "销售记录", businessType = BusinessType.INSERT)
+    @Log(title = "借阅记录", businessType = BusinessType.INSERT)
     @PostMapping("/add")
     @ResponseBody
     public AjaxResult addSave(BookSale bookSale)
@@ -103,7 +101,7 @@ public class BookSaleController extends BaseController
     }
 
     /**
-     * 修改销售记录
+     * 修改借阅记录
      */
     @RequiresPermissions("lottery:sale:edit")
     @GetMapping("/edit/{id}")
@@ -115,10 +113,10 @@ public class BookSaleController extends BaseController
     }
 
     /**
-     * 修改保存销售记录
+     * 修改保存借阅记录
      */
     @RequiresPermissions("lottery:sale:edit")
-    @Log(title = "销售记录", businessType = BusinessType.UPDATE)
+    @Log(title = "借阅记录", businessType = BusinessType.UPDATE)
     @PostMapping("/edit")
     @ResponseBody
     public AjaxResult editSave(BookSale bookSale)
@@ -127,15 +125,15 @@ public class BookSaleController extends BaseController
     }
 
     /**
-     * 删除销售记录
+     * 删除借阅记录
      */
     @RequiresPermissions("lottery:sale:remove")
-    @Log(title = "销售记录", businessType = BusinessType.DELETE)
+    @Log(title = "借阅记录", businessType = BusinessType.DELETE)
     @PostMapping( "/remove")
     @ResponseBody
     public AjaxResult remove(String ids)
     {
-        //删除销售记录，增库存
+        //删除借阅记录，增库存
         String id[] = ids.split(",");
         for (String s : id) {
             BookSale sale = bookSaleService.selectBookSaleById(Long.valueOf(s));

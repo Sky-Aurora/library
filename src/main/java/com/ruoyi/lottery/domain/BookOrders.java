@@ -8,7 +8,7 @@ import com.ruoyi.common.annotation.Excel;
 import com.ruoyi.common.core.domain.BaseEntity;
 
 /**
- * 销售订单对象 book_orders
+ * 借阅记录对象 book_orders
  * 
  * @author Shawn
  * @date 2024-02-29

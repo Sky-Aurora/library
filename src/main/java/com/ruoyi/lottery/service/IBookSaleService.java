@@ -4,7 +4,7 @@ import java.util.List;
 import com.ruoyi.lottery.domain.BookSale;
 
 /**
- * 销售记录Service接口
+ * 借阅记录Service接口
  * 
  * @author Shawn
  * @date 2024-03-05
@@ -12,49 +12,49 @@ import com.ruoyi.lottery.domain.BookSale;
 public interface IBookSaleService 
 {
     /**
-     * 查询销售记录
+     * 查询借阅记录
      * 
-     * @param id 销售记录主键
-     * @return 销售记录
+     * @param id 借阅记录主键
+     * @return 借阅记录
      */
     public BookSale selectBookSaleById(Long id);
 
     /**
-     * 查询销售记录列表
+     * 查询借阅记录列表
      * 
-     * @param bookSale 销售记录
-     * @return 销售记录集合
+     * @param bookSale 借阅记录
+     * @return 借阅记录集合
      */
     public List<BookSale> selectBookSaleList(BookSale bookSale);
 
     /**
-     * 新增销售记录
+     * 新增借阅记录
      * 
-     * @param bookSale 销售记录
+     * @param bookSale 借阅记录
      * @return 结果
      */
     public int insertBookSale(BookSale bookSale);
 
     /**
-     * 修改销售记录
+     * 修改借阅记录
      * 
-     * @param bookSale 销售记录
+     * @param bookSale 借阅记录
      * @return 结果
      */
     public int updateBookSale(BookSale bookSale);
 
     /**
-     * 批量删除销售记录
+     * 批量删除借阅记录
      * 
-     * @param ids 需要删除的销售记录主键集合
+     * @param ids 需要删除的借阅记录主键集合
      * @return 结果
      */
     public int deleteBookSaleByIds(String ids);
 
     /**
-     * 删除销售记录信息
+     * 删除借阅记录信息
      * 
-     * @param id 销售记录主键
+     * @param id 借阅记录主键
      * @return 结果
      */
     public int deleteBookSaleById(Long id);

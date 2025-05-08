@@ -18,8 +18,8 @@ public class BookOrderdetails extends BaseEntity
     /** 主键 */
     private Long id;
 
-    /** 销售订单表的订单ID */
-    @Excel(name = "销售订单表的订单ID")
+    /** 借阅记录表的订单ID */
+    @Excel(name = "借阅记录表的订单ID")
     private Long orderId;
 
     /** 书本id */

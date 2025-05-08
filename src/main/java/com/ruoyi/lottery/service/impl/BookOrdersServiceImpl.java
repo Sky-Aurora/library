@@ -9,7 +9,7 @@ import com.ruoyi.lottery.service.IBookOrdersService;
 import com.ruoyi.common.core.text.Convert;
 
 /**
- * 销售订单Service业务层处理
+ * 借阅记录Service业务层处理
  * 
  * @author Shawn
  * @date 2024-02-29
@@ -21,10 +21,10 @@ public class BookOrdersServiceImpl implements IBookOrdersService
     private BookOrdersMapper bookOrdersMapper;
 
     /**
-     * 查询销售订单
+     * 查询借阅记录
      * 
-     * @param id 销售订单主键
-     * @return 销售订单
+     * @param id 借阅记录主键
+     * @return 借阅记录
      */
     @Override
     public BookOrders selectBookOrdersById(Long id)
@@ -33,10 +33,10 @@ public class BookOrdersServiceImpl implements IBookOrdersService
     }
 
     /**
-     * 查询销售订单列表
+     * 查询借阅记录列表
      * 
-     * @param bookOrders 销售订单
-     * @return 销售订单
+     * @param bookOrders 借阅记录
+     * @return 借阅记录
      */
     @Override
     public List<BookOrders> selectBookOrdersList(BookOrders bookOrders)
@@ -45,9 +45,9 @@ public class BookOrdersServiceImpl implements IBookOrdersService
     }
 
     /**
-     * 新增销售订单
+     * 新增借阅记录
      * 
-     * @param bookOrders 销售订单
+     * @param bookOrders 借阅记录
      * @return 结果
      */
     @Override
@@ -57,9 +57,9 @@ public class BookOrdersServiceImpl implements IBookOrdersService
     }
 
     /**
-     * 修改销售订单
+     * 修改借阅记录
      * 
-     * @param bookOrders 销售订单
+     * @param bookOrders 借阅记录
      * @return 结果
      */
     @Override
@@ -69,9 +69,9 @@ public class BookOrdersServiceImpl implements IBookOrdersService
     }
 
     /**
-     * 批量删除销售订单
+     * 批量删除借阅记录
      * 
-     * @param ids 需要删除的销售订单主键
+     * @param ids 需要删除的借阅记录主键
      * @return 结果
      */
     @Override
@@ -81,9 +81,9 @@ public class BookOrdersServiceImpl implements IBookOrdersService
     }
 
     /**
-     * 删除销售订单信息
+     * 删除借阅记录信息
      * 
-     * @param id 销售订单主键
+     * @param id 借阅记录主键
      * @return 结果
      */
     @Override
