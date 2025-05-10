@@ -5,9 +5,7 @@ import com.ruoyi.lottery.domain.BookSale;
 
 /**
  * 借阅记录Service接口
- * 
- * @author Shawn
- * @date 2024-03-05
+ *
  */
 public interface IBookSaleService 
 {
